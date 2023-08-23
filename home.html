@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Hough Science Olympiad Home</title>
+        <link rel="stylesheet" href="styles1.css" />
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+        
+        <script>
+            
+        </script>
+    </head>
+    <body>
+        
+        <!-- Navigation Bar -->
+        <nav class="navigationWrapper">
+            
+            <header class="header">
+                <h1 class="logo">
+                    <!-- Hough Husky Logo -->
+                    <a href="home.html"><img src="huskies-logo.png" alt="Hough Husky Logo" style="width:80px;height:80px;"> </a> 
+                </h1>
+                
+                <!-- Bailey Broncos Logo -->
+                <a href="https://www.soinc.org/" target="_blank"> <img src="bailey-broncos-logo.png" alt="Bailey Broncos Logo" style="width:125px;height:80px;"> </a>
+                
+                <!-- Science Olympiad Logo -->
+                <a href="https://www.soinc.org/" target="_blank"> <img src="science-olympiad.png" alt="Science Olympiad Logo" style="width:150px;height:80px;"> </a>
+                
+                <ul class="main-nav">
+                    <li> <a href="home.html"> Home </a> </li>
+                    <li> <a href="sign-up.html"> Sign Up </a> </li>
+                    <li> <a href="about.html"> About </a> </li>
+                    <li> <a href="#events"> Events </a> </li>
+                    <li> <a href="contact-us.html"> Contact Us </a> </li>
+                    <li> <a href="#payment.html"> Payment </a> </li>
+                </ul>
+	       </header> 
+                
+        </nav> 
+        
+        
+        <!-- Start Welcome Header -->
+
+        <div class="theHeader">
+
+            <!--Content before waves-->
+            <div class="inner-header flex">
+                <p>Welcome to HOUGH and BAILEY <span class="fancy">Science Olympiad!</span></p>
+
+            </div>
+
+            <!--Waves Container-->
+            <div>
+                <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+                    <defs>
+                        <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+                    </defs>
+                    <g class="parallax">
+                        <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
+                        <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
+                        <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+                        <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+                    </g>
+                </svg>
+            </div>
+            <!--Waves end-->
+
+        </div>
+        
+        <!-- End Welcome Header -->
+        
+        <br>
+        <br>    
+        
+        
+        <!-- Start Image Slider-->
+        
+        <div class="slideshow-container">
+
+            <div class="mySlides fade">
+                <div class="numbertext">1 / 3</div>
+                <img src="huskies-logo.png" style="width:100%"> <!-- EDIT IMAGE -->
+                <div class="text">Caption Text</div> <!-- EDIT TEXT-->
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">2 / 3</div>
+                <img src="bailey-broncos-logo.png" style="width:100%"> <!-- EDIT IMAGE -->
+                <div class="text">Caption Two</div> <!-- EDIT TEXT-->
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">3 / 3</div>
+                <img src="science-olympiad.png" style="width:100%"> <!-- EDIT IMAGE -->
+                <div class="text">Caption Three</div> <!-- EDIT TEXT-->
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
+
+        </div>
+        
+        <br>
+
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span> 
+            <span class="dot" onclick="currentSlide(2)"></span> 
+            <span class="dot" onclick="currentSlide(3)"></span> 
+        </div>
+
+        
+        <script>
+            let slideIndex = 1;
+            showSlides(slideIndex);
+
+            function plusSlides(n) {
+                showSlides(slideIndex += n);
+            }
+
+            function currentSlide(n) {
+                showSlides(slideIndex = n);
+            }
+
+            function showSlides(n) {
+                let i;
+                let slides = document.getElementsByClassName("mySlides");
+                let dots = document.getElementsByClassName("dot");
+                if (n > slides.length) {
+                    slideIndex = 1
+                }    
+                if (n < 1) {
+                    slideIndex = slides.length
+                }
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";  
+                }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex-1].style.display = "block";  
+                dots[slideIndex-1].className += " active";
+            }
+        </script>
+
+        <!-- End Image Slider-->
+        
+        
+        
+        <!-- Start Links-->
+        
+        <feature-compare>
+            <free-level>
+                <h3>#2 Most Popular</h3>
+                <ul class="ulElement">
+                    <li class="tick"><span>Page 2</span></li>
+                </ul>
+                <a class="button" href="#">Go to #2<span> Most Popular</span></a>
+            </free-level>
+            <standard-level>
+                <h3>#1 Most Popular</h3>
+                <ul class="ulElement">
+                    <li class="tick">Page 1</li>
+                </ul>
+                <a class="button" href="#">Go to #1 Most Popular</a>
+            </standard-level>
+            <pro-level>
+                <h3>#3 Most Popular</h3>
+                <ul class="ulElement">
+                    <li class="tick"><span>Page 3</span></li>
+                </ul>
+                <a class="button" href="#">Go to #3<span> Most Popular</span></a>
+            </pro-level>
+        </feature-compare>
+        
+        <!-- End Links-->
+        
+    </body>
+    
+</html>
